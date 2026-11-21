@@ -1,12 +1,12 @@
-# 				W8	Practice
+# W8	Practice
 
-### 			Lists, Pass Functions, Lift States Up
+### Lists, Pass Functions, Lift States Up
 
 ##### EX 1 - Loop when creating widgets ...
 
 Q1 - In what scenarios might one approach **be more advantageous** than another? (in terms of readability, maintainability, performance, etc.)
 
-A1 = In terms of readability, maintainability, performance, beginner friendly, 
+A1 = In terms of readability, maintainability, performance, beginner friendly,
 
 | Type               | When to use it                                                                                | Readability                                                                        | Maintainability                                                                             | Performance |
 | ------------------ | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ----------- |
@@ -23,7 +23,7 @@ Q1 - Reflect in group
 - How are you going to manage this?
 - Explain your solution using a **component diagram** (WelcomeScreen + TemperatureScreen)
 
-A1 = 
+A1 =
 
 - I am going to manage this by puting the state in the parent, 'TemperatureApp', which is a Stateful widget. I added a `bool` called `_log = false`. In build(), I use a ternary operator to pick between the TemperatureScreen or WelcomeScreen. Since, WelcomeScreen can't change `_log` by itself, so the parent gives it a callback called `isLogged`. When I pressed the button, it will switch to the TemperatureScreen.
 - Component Diagram:
@@ -34,7 +34,7 @@ Q2 - Coding [Done]
 
 ##### EX 3 - Refactor the code to bind with data
 
-Coding [Starting]
+Coding [Done]
 
 ##### EX 4 - Manage a list of jokes
 

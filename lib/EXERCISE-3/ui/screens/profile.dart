@@ -1,10 +1,12 @@
+import '../../model/profile_tile_model.dart';
 import 'package:flutter/material.dart';
 
 import '../theme/theme.dart';
 
 class ProfileApp extends StatelessWidget {
-  const ProfileApp({super.key});
+  const ProfileApp({super.key, required this.profile});
 
+  final ProfileData profile;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,43 +19,34 @@ class ProfileApp extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             const SizedBox(height: 40),
-            const CircleAvatar(
+            CircleAvatar(
               radius: 60,
               backgroundImage: AssetImage(
-                  'assets/images/w8/aang.png'), 
+                  profile.avatarUrl), 
             ),
             const SizedBox(height: 20),
             Text(
-              'Ronan OGOR',
+              profile.name,
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
                 color: AppColors.primary,
               ),
             ),
-            const Text(
-              'Flutter Developer',
+            Text(
+              profile.position,
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.grey,
               ),
             ),
             const SizedBox(height: 20),
-            const ProfileTile(
-              icon: Icons.phone,
-              title: "Phone Number",
-              data: "+123 456 7890",
-            ),
-             const ProfileTile(
-              icon: Icons.location_on,
-              title: "Address",
-              data: "Cambodia",
-            ),
+            ...profile.tiles.map((t) => ProfileTile(icon: t.icon, title: t.title, data: t.value))
           ],
         ),
       ),
