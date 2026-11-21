@@ -18,15 +18,15 @@ void main() {
               Label("Method 1: Loop in Array", bold: true),
               // TODO
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Start"),
-                  for (var i = 0; i < colors.length; i ++) Text('Item ${colors[i]}'),
-                  Text("End"),
+                  for (var i = 0; i < colors.length; i ++) Text(colors[i]),
                 ],
               ),
               Label("Method 2: Map", bold: true),
               // TODO
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ...colors.map((i) => Text(i)),
                 ],
@@ -34,6 +34,7 @@ void main() {
               Label("Method 23: Dedicated Function", bold: true),
               // TODO
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ...getLabels(),
                 ],
