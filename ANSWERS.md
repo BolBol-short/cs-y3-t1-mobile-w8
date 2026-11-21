@@ -28,7 +28,7 @@ A1 =
 - I am going to manage this by puting the state in the parent, 'TemperatureApp', which is a Stateful widget. I added a `bool` called `_log = false`. In build(), I use a ternary operator to pick between the TemperatureScreen or WelcomeScreen. Since, WelcomeScreen can't change `_log` by itself, so the parent gives it a callback called `isLogged`. When I pressed the button, it will switch to the TemperatureScreen.
 - Component Diagram:
 
-![1795231188010](image/ANSWERS/1795231188010.png)
+![1795231303589](image/ANSWERS/1795231303589.png)
 
 Q2 - Coding [Done]
 
