@@ -38,7 +38,7 @@ Coding [Done]
 
 ##### EX 4 - Manage a list of jokes
 
-Coding [Starting]
+Coding [Done]
 
 You will need to **re-think** about your **data structure** and **widget interaction** to perform the changes:
 
@@ -50,4 +50,4 @@ You will need to **re-think** about your **data structure** and **widget interac
 
 ##### Bonus
 
-Coding [Starting]
+Coding [Done]
